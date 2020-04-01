@@ -4,7 +4,7 @@
 //create a single object name "slideshow"
 var slideshow = {
     //create an array that contains the names as strings
-    //    array:  [0]        [1]        [2]
+    //    array:  [0]    [1]     [2]     [3]
     photoList: ['NSX', 'S2000', 'GTR', 'Supra'],
     
     //integer for currentPhotoIndex of where the current location is

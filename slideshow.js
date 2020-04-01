@@ -1,5 +1,5 @@
 //Slideshow Javascript Lab
-//Date: 3/31/2020
+//Date: 4/1/2020
 
 //create a single object name "slideshow"
 var slideshow = {
@@ -36,22 +36,39 @@ var slideshow = {
     },
     //get current photo function
     getCurrentPhoto: function(){
-        return this.photoList[this.currentPhotoIndex];
-        
-    }
+        return this.photoList[this.currentPhotoIndex];  
+    },
+
+    playInterval: null,
+
+    play: function(){
+        var one = this;
+        this.playInterval = setInterval(function(){
+            one.nextPhoto();
+        }, 2000)
+    },
+
+    pause: function(){
+        clearInterval(this.playInterval);
+    },
+
+    
+
     
 }// this is the end brack of object var = slideshow
 
 //shows the outputs of the codes
 console.log(slideshow.getCurrentPhoto());
-slideshow.nextPhoto();
-slideshow.nextPhoto();
-slideshow.nextPhoto();
-slideshow.nextPhoto();
-slideshow.prevPhoto();
-slideshow.prevPhoto();
-slideshow.prevPhoto();
-slideshow.prevPhoto();
+slideshow.play();
+// slideshow.nextPhoto();
+// slideshow.nextPhoto();
+// slideshow.nextPhoto();
+// slideshow.nextPhoto();
+// console.log(slideshow.getCurrentPhoto());
+// slideshow.prevPhoto();
+// slideshow.prevPhoto();
+// slideshow.prevPhoto();
+// slideshow.prevPhoto();
 
 
 

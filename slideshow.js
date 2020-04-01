@@ -16,6 +16,7 @@ var slideshow = {
         //this states the end of the slideshow
         if(this.currentPhotoIndex === (this.photoList.length-1)){
             console.log("End of slideshow");
+            this.pause();
         }
         //this shows the current photo
         else {
@@ -28,6 +29,7 @@ var slideshow = {
     prevPhoto: function(){
         if(this.currentPhotoIndex === 0){
             console.log("Beginning of slideshow");
+            
         }
         else {
             this.currentPhotoIndex--;       // current photo where it will go back to beginning
